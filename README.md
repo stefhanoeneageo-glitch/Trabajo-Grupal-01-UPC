@@ -2,7 +2,6 @@
 ## 1. Dataset
 **Nombre:** Concrete Compressive Strength Data Set
 **Fuente:** UCI Machine Learning Repository / Kaggle
-**Enlace:** https://www.kaggle.com/datasets/elikplim/concrete-compressive-strength-data-set
 Este dataset contiene 1030 registros de mezclas de concreto probadas en laboratorio. 
 Cada fila representa una mezcla distinta, con 8 variables de entrada (ingredientes y edad) 
 y 1 variable de salida (la resistencia a compresión resultante, medida en MPa).
