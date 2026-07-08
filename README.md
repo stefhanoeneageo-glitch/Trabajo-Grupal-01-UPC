@@ -61,3 +61,6 @@ Estabilidad ante la elección del modelo: comparando al menos dos algoritmos dis
 2. Yeh, I-C. (2006). *Analysis of strength of concrete using design of experiments 
    and neural networks*. Journal of Materials in Civil Engineering, ASCE, 18(4), 597-604.
 3. Yu, B., & Barter, R. (2024). Veridical Data Science. MIT Press. https://vdsbook.com/
+4. Chou, J. S., & Pham, A. D. (2013). *Enhanced artificial intelligence for ensemble approach to predicting high performance concrete compressive strength*. Automation in Construction, 29, 43-53.
+5. ACI Committee 318. (2019). *Building Code Requirements for Structural Concrete (ACI 318-19) and Commentary*. American Concrete Institute.
+6. INDECOPI. (2015). *NTP 339.034: Hormigón (concreto). Método de ensayo para la determinación de la resistencia a la compresión de especímenes cilíndricos de hormigón*. Lima, Perú.
