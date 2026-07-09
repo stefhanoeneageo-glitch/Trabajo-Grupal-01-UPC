@@ -3,8 +3,8 @@
 El presente proyecto tiene como finalidad predecir la resistencia a compresión del concreto (medida en MPa) a partir de las proporciones de sus componentes (cemento, escoria de alto horno, cenizas volantes, agua, superplastificante, agregado grueso, agregado fino) y su edad de curado (en días), utilizando técnicas de ciencia de datos y aprendizaje automático.
 Este objetivo responde a un problema real de ingeniería estructural: actualmente, determinar la resistencia del concreto requiere ensayos físicos de compresión que toman hasta 28 días de curado. Un modelo predictivo confiable permitiría estimar la resistencia con anticipación, optimizando el diseño de mezclas y reduciendo tiempos y costos en obra, sin reemplazar —pero sí complementar— los ensayos de laboratorio tradicionales.
 ## 1. Dataset
-**Nombre:** Concrete Compressive Strength Data Set
-**Fuente:** UCI Machine Learning Repository / Kaggle
+### **Nombre:** Concrete Compressive Strength Data Set
+### **Fuente:** UCI Machine Learning Repository / Kaggle
 Este dataset contiene 1030 registros de mezclas de concreto probadas en laboratorio. 
 Cada fila representa una mezcla distinta, con 8 variables de entrada (ingredientes y edad) 
 y 1 variable de salida (la resistencia a compresión resultante, medida en MPa).
@@ -64,3 +64,8 @@ Estabilidad ante la elección del modelo: comparando al menos dos algoritmos dis
 4. Chou, J. S., & Pham, A. D. (2013). *Enhanced artificial intelligence for ensemble approach to predicting high performance concrete compressive strength*. Automation in Construction, 29, 43-53.
 5. ACI Committee 318. (2019). *Building Code Requirements for Structural Concrete (ACI 318-19) and Commentary*. American Concrete Institute.
 6. INDECOPI. (2015). *NTP 339.034: Hormigón (concreto). Método de ensayo para la determinación de la resistencia a la compresión de especímenes cilíndricos de hormigón*. Lima, Perú.
+## INTEGRANTES:
+### Daniel Francisco Burgos Jaime.
+### Jose Fernando Vargas Zolorzano.
+### Juan Martin Ubillus Limo.
+### Stefhano Felipe Sinarahua Ramos.
