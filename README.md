@@ -55,7 +55,16 @@ Para garantizar la estabilidad de los resultados, se plantea evaluar:
 Estabilidad ante el muestreo: usando validación cruzada (k-fold) para verificar que el desempeño del modelo no dependa de una partición específica de entrenamiento/prueba.
 Estabilidad ante perturbaciones en los datos: comprobando que pequeños cambios (ruido leve, remuestreo con reemplazo tipo bootstrap) no alteren drásticamente las predicciones ni las variables más importantes identificadas por el modelo.
 Estabilidad ante la elección del modelo: comparando al menos dos algoritmos distintos (por ejemplo, regresión lineal/regularizada vs. un modelo no lineal como random forest o red neuronal) para verificar que las conclusiones principales (qué variables importan más, qué tan predecible es la resistencia) se mantengan consistentes independientemente del método usado.
-## 4. Referencias
+## 4. Resultados del Análisis (EDA)
+
+### 4.1. Relación Agua/Cemento vs. Resistencia
+![Gráfico Relación A/C](grafico_relacion_ac.png)
+**Análisis:** Existe una correlación negativa: a mayor relación agua/cemento, menor resistencia (f'c). La variable "age" (días) muestra que la resistencia aumenta con el tiempo de curado.
+
+### 4.2. Matriz de Correlación
+![Matriz de Correlación](matriz_correlacion.png)
+**Análisis:** El cemento presenta la correlación más alta con la resistencia. La relación negativa del agua confirma que es la variable crítica a controlar en obra para garantizar la calidad del concreto.
+## 5.Referencias
 1. Yeh, I-C. (1998). *Modeling of strength of high performance concrete using 
    artificial neural networks*. Cement and Concrete Research, 28(12), 1797-1808.
 2. Yeh, I-C. (2006). *Analysis of strength of concrete using design of experiments 
@@ -69,5 +78,19 @@ Estabilidad ante la elección del modelo: comparando al menos dos algoritmos dis
 ### Jose Fernando Vargas Zolorzano.
 ### Juan Martin Ubillus Limo.
 ### Stefhano Felipe Sinarahua Ramos.
-## BITACORIA IA
 
+## BITACORIA IA
+### Bitácora de Desarrollo: Análisis Exploratorio (EDA) y Modelado IA
+Actividad:
+
+Entorno de Trabajo: Se configuró el entorno de desarrollo en Python utilizando Visual Studio Code, gestionando las dependencias (pandas, matplotlib, seaborn, scikit-learn) necesarias para el tratamiento de datos estructurales.
+
+Análisis Exploratorio de Datos (EDA): Se ejecutó el script eda_concreto.py para analizar la correlación entre los componentes de la mezcla y la resistencia a la compresión (f'c).
+
+Resultados Técnicos:
+
+Se graficó la relación Agua/Cemento (w/c), confirmando la tendencia no lineal de pérdida de resistencia ante el exceso de agua.
+
+Se generó la Matriz de Correlación, validando la influencia positiva del cemento y los aditivos frente a la resistencia final.
+
+Conclusión: Los datos validados permiten proceder con la etapa de modelado predictivo mediante algoritmos de árboles de decisión (Random Forest y XGBoost), seleccionados por su capacidad para capturar interacciones no lineales en mezclas complejas.
