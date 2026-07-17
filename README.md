@@ -64,6 +64,15 @@ Estabilidad ante la elección del modelo: comparando al menos dos algoritmos dis
 ### 4.2. Matriz de Correlación
 ![Matriz de Correlación](matriz_correlacion.png)
 **Análisis:** El cemento presenta la correlación más alta con la resistencia. La relación negativa del agua confirma que es la variable crítica a controlar en obra para garantizar la calidad del concreto.
+
+### 4.3 Distribución de Resistencias (Histograma)
+![Histograma de Resistencia](histograma_resistencia.png)
+**Análisis:** El histograma muestra la frecuencia de los diseños de mezcla agrupados por su resistencia a la compresión. Se observa que la mayor concentración de datos empíricos se encuentra en el rango de 24 a 46 MPa, confirmando que la base de datos es representativa para concretos de resistencia media a alta.
+
+### 4.4 Detección de Valores Atípicos (Boxplot)
+![Boxplot de Resistencia](boxplot_resistencia.png)
+**Análisis:** El diagrama de caja (boxplot) evalúa la dispersión estadística de la resistencia y detecta valores atípicos (outliers). Se identificaron ensayos anómalos que superan los 80 MPa; estos registros han sido aislados para verificar su dosificación y descartar posibles errores de laboratorio antes de entrenar el modelo predictivo.
+
 ## 5.Referencias
 1. Yeh, I-C. (1998). *Modeling of strength of high performance concrete using 
    artificial neural networks*. Cement and Concrete Research, 28(12), 1797-1808.
