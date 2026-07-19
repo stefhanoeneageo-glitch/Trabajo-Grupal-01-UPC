@@ -73,7 +73,27 @@ Estabilidad ante la elección del modelo: comparando al menos dos algoritmos dis
 ![Boxplot de Resistencia](boxplot_resistencia.png)
 **Análisis:** El diagrama de caja (boxplot) evalúa la dispersión estadística de la resistencia y detecta valores atípicos (outliers). Se identificaron ensayos anómalos que superan los 80 MPa; estos registros han sido aislados para verificar su dosificación y descartar posibles errores de laboratorio antes de entrenar el modelo predictivo.
 
-## 5.Referencias
+## 5. Modelado y Comparación de Resultados
+
+Se entrenaron y compararon dos algoritmos de aprendizaje automático (`modelo_comparacion.py`) mediante validación cruzada de 5 particiones (5-fold cross-validation):
+
+| Modelo | R² | RMSE (MPa) | MAE (MPa) |
+|---|---|---|---|
+| Regresión Ridge | 0.594 | 10.33 | 8.21 |
+| Random Forest | 0.907 | 4.92 | 3.47 |
+
+### 5.1 Comparación de Modelos
+![Comparación de Modelos](comparacion_modelos.png)
+**Análisis:** Random Forest superó ampliamente a la Regresión Ridge en las tres métricas evaluadas, explicando el 90.7 % de la variabilidad en la resistencia frente a un 59.4 % del modelo lineal. Esto confirma que la relación entre los componentes del concreto y su resistencia es predominantemente no lineal, tal como se anticipó en el marco PCS (sección 3.1).
+
+### 5.2 Importancia de Variables
+![Importancia de Variables](importancia_variables.png)
+**Análisis:** Las variables más influyentes en la predicción del Random Forest fueron la edad de curado (34.0 %) y el cemento (32.0 %), seguidas por el agua (10.7 %). Este resultado es consistente con el análisis de dominio (sección 2) y con la matriz de correlación (sección 4.2), validando que el modelo capturó relaciones físicamente coherentes con la teoría de diseño de mezclas.
+
+**Código fuente:** [`modelo_comparacion.py`](modelo_comparacion.py)
+**Informe completo:** [`Informe_Final_Grupo06.docx`](Informe_Final_Grupo06.docx) (formato IEEE, con metodología, resultados y conclusiones detalladas).
+
+## 6.Referencias
 1. Yeh, I-C. (1998). *Modeling of strength of high performance concrete using 
    artificial neural networks*. Cement and Concrete Research, 28(12), 1797-1808.
 2. Yeh, I-C. (2006). *Analysis of strength of concrete using design of experiments 
@@ -98,8 +118,12 @@ Análisis Exploratorio de Datos (EDA): Se ejecutó el script eda_concreto.py par
 
 Resultados Técnicos:
 
-Se graficó la relación Agua/Cemento (w/c), confirmando la tendencia no lineal de pérdida de resistencia ante el exceso de agua.
+Se ejecutó el script modelo_comparacion.py para entrenar y comparar dos algoritmos de aprendizaje automático (Regresión Ridge y Random Forest) mediante validación cruzada de 5 particiones.
 
-Se generó la Matriz de Correlación, validando la influencia positiva del cemento y los aditivos frente a la resistencia final.
+Resultados Técnicos:
 
-Conclusión: Los datos validados permiten proceder con la etapa de modelado predictivo mediante algoritmos de árboles de decisión (Random Forest y XGBoost), seleccionados por su capacidad para capturar interacciones no lineales en mezclas complejas.
+Se graficó la Comparación de Modelos (R²), confirmando que Random Forest (R² = 0.907) supera ampliamente a la Regresión Ridge (R² = 0.594) en capacidad predictiva.
+
+Se generó el gráfico de Importancia de Variables, validando que la edad de curado (34.0 %) y el cemento (32.0 %) son los factores con mayor influencia sobre la resistencia a compresión.
+
+Conclusión: Los resultados confirman la hipótesis planteada en el marco PCS (sección 3.1): la relación entre los componentes del concreto y su resistencia es no lineal, por lo que un modelo de ensamble como Random Forest resulta más adecuado que un modelo lineal regularizado para este problema.
